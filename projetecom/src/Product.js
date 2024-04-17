@@ -1,24 +1,22 @@
 import React from 'react'
-import {
-  CardHeader,
-  CardDescription,
-  CardContent,
-  Card,
-  Image,
-} from 'semantic-ui-react'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 
 
-const Product = (Props) => (
-<Card>
-    <Image src={Props.Image} wrapped ui={false} />
-    <CardContent>
-      <CardHeader>{Props.Name}</CardHeader>
-      <CardDescription>
+function Product(Props){
+  return (
+<Card style={{ width: '18rem' }}>
+<Card.Img variant="top" src={Props.Image}/>
+<Card.Body>
+<Card.Title>{Props.Name}</Card.Title>
+<Card.Text>
     {Props.Price}
-      </CardDescription>
-    </CardContent>
-</Card>
-)
+    </Card.Text>
+    <Button variant="primary">Add to cart</Button>
+      </Card.Body>
+    </Card>
+  );
+}
 
 export default Product ;

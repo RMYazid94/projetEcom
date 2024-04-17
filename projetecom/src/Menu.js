@@ -1,51 +1,43 @@
-import React, { Component } from 'react'
-import { MenuItem, Menu } from 'semantic-ui-react '
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
-import Products from './Products'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default class MenuExampleStackable extends Component {
-  state = {}
+function BasicExample() {
+  return (
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
-  render() {
-    const { activeItem } = this.state
-
-    return (
-<Router>
-      <Menu stackable>
-        <MenuItem>
-          <img alt='logo' src='https://www.1min30.com/wp-content/uploads/2019/02/Le-logo-Apple.jpg' />
-        </MenuItem>
-
-        <MenuItem
-          name='Product'
-          active={activeItem === 'Product'}
-          onClick={this.handleItemClick}
-        >
-          Product
-        </MenuItem>
-
-        <MenuItem
-          name='testimonials'
-          active={activeItem === 'testimonials'}
-          onClick={this.handleItemClick}
-        >
-          Testimonials
-        </MenuItem>
-
-        <MenuItem
-          name='sign-in'
-          active={activeItem === 'sign-in'}
-          onClick={this.handleItemClick}
-        >
-          Sign-in
-        </MenuItem>
-      </Menu>
-<Route path='/product' component={Products}/>
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="#home"> <img src="https://www.iphon.fr/app/uploads/2022/04/fond-ecran-wuhan-apple-store-scaled.jpg" alt="logo" style={{width: "50px", height: "50px"}}/></Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Link</Nav.Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+    
+  );
  
-      </Router>
-    )
-  }
 }
 
+export default BasicExample;
+
+
+ 
+     

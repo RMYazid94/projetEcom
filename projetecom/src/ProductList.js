@@ -5,8 +5,8 @@ import Products from './Products';
 
 function ProductList() {
   return (
-    <>{
-    Products.map((Prd)=>(
+    <>
+    {Products.map((Prd)=>(
     <Product
     Image={Prd.ImageUrl}
     Name={Prd.Name}
