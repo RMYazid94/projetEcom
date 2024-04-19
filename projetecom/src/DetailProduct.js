@@ -1,11 +1,19 @@
 import React from 'react'
+import Product from './Product';
 
-function DetailProduct() {
+function DetailProduct({Products}) {
 return (
-    <div>
+<>
+<div>
+{Products.map((Product) =>(
+<img src={Product.ImageUrl} />
+<h1>{Product.Name}</h1>
+<p>{Product.Price}</p>
 
-
-    </div>
+))}
+</div>
+<input></input>
+</>
     )
 }
 
