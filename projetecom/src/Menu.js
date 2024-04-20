@@ -16,12 +16,11 @@ function BasicExample() {
 <Router>
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home"> <img src="https://www.iphon.fr/app/uploads/2022/04/fond-ecran-wuhan-apple-store-scaled.jpg" alt="logo" style={{width: "50px", height: "50px"}}/></Navbar.Brand>
+        <Navbar.Brand href="/"> <img src="https://www.iphon.fr/app/uploads/2022/04/fond-ecran-wuhan-apple-store-scaled.jpg" alt="logo" style={{width: "50px", height: "50px"}}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link to="/">Home</Link>
-            <Link to="/ProductList">Product</Link>
+            <Link to="/">Product</Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -38,7 +37,7 @@ function BasicExample() {
       </Container>
     </Navbar>
 <Routes>
-<Route path="/ProductList" element={<ProductList/>}/>
+<Route path="/" element={<ProductList/>}/>
 <Route path="/ProductList/:id" element={<DetailProduct/>}/>
 
 <Route path=""/>

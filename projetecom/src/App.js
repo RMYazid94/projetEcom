@@ -7,8 +7,8 @@ import DetailProduct from './DetailProduct';
 function App() {
   return (
     <>
-     <Menu/>
     <div className="App">
+    <Menu/>
     </div>
     </>
   );
