@@ -1,7 +1,11 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
+import { useParams } from 'react-router-dom';
+import Products from './Products';
 
 function DetailProduct({}) {
+    const {id}=useParams();
+    const product=Products.find((prod)=>prod.id==id); 
 return (
 <section className="d-flex flex-column w-100">
 <div className='d-flex justify-content-around w-100'>
@@ -14,7 +18,7 @@ return (
      <input placeholder='1'></input>
      <Button as="input" type="submit" value="Submit" />{' '}
   </div>
- </div>
+</div>
 <div>
     <h4>About this Product</h4>
     <p>Description du produit</p>

@@ -9,7 +9,6 @@ function App() {
     <>
      <Menu/>
     <div className="App">
-    <DetailProduct/>
     </div>
     </>
   );

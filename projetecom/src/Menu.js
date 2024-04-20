@@ -5,6 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProductList from './ProductList';
 import { BrowserRouter as Router, Route, Routes, Link} from "react-router-dom"
+import DetailProduct from './DetailProduct';
 
 
 
@@ -38,6 +39,7 @@ function BasicExample() {
     </Navbar>
 <Routes>
 <Route path="/ProductList" element={<ProductList/>}/>
+<Route path="/ProductList/:id" element={<DetailProduct/>}/>
 
 <Route path=""/>
 </Routes>

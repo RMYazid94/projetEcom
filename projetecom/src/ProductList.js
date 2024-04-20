@@ -6,6 +6,7 @@ import Products from './Products';
 function ProductList() {
   return (
     <>
+    <div className="d-flex justify-content ">
     {Products.map((Prd)=>(
     <Product
     Image={Prd.ImageUrl}
@@ -13,6 +14,7 @@ function ProductList() {
     Price={Prd.Price}
     />
    )) }
+   </div>
     </>
   )
 }
